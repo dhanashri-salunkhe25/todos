@@ -6,6 +6,8 @@ A full-stack todo application built with React and Node.js, featuring a modern U
 
 **[View Live Application](https://dhanashri-salunkhe25.github.io/todos/)**
 
+*Note: The live demo currently shows the frontend interface. For full functionality with data persistence, you'll need to deploy the backend API to a service like Heroku, Vercel, or Railway, and update the frontend's API URL.*
+
 ## ✨ Features
 
 - ✅ **Add, Edit, Delete** todos
@@ -118,17 +120,48 @@ VITE_API_URL=http://localhost:5000
 ## 🚀 Deployment
 
 ### Frontend (GitHub Pages)
+The frontend is automatically deployed to GitHub Pages at: https://dhanashri-salunkhe25.github.io/todos/
+
+To deploy frontend changes:
 ```bash
 cd frontend
+npm run build
+# Manually copy dist/ contents to gh-pages branch or use gh-pages package
 npm run deploy
 ```
 
-### Backend
-The backend can be deployed to platforms like:
-- Heroku
-- Vercel
-- Railway
-- DigitalOcean
+### Backend Deployment Options
+
+#### Option 1: Heroku
+```bash
+# Create a new Heroku app
+heroku create your-app-name
+
+# Add MongoDB connection string
+heroku config:set MONGO_URI=your_mongodb_connection_string
+
+# Deploy
+git subtree push --prefix backend heroku master
+```
+
+#### Option 2: Vercel
+```bash
+cd backend
+npm install -g vercel
+vercel
+```
+
+#### Option 3: Railway
+```bash
+# Connect your GitHub repo to Railway
+# Set environment variable: MONGO_URI
+# Deploy automatically on push
+```
+
+After deploying the backend, update the frontend's `.env` file:
+```env
+VITE_API_URL=https://your-deployed-backend-url.com
+```
 
 ## 🐛 Troubleshooting
 
