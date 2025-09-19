@@ -1,0 +1,34 @@
+{
+  "name": "todos-app",
+  "version": "1.0.0",
+  "description": "Full-stack Todo application with React frontend and Node.js backend",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "start-all": "concurrently \"cd backend && npm start\" \"cd frontend && npm run dev\""
+  },
+  "keywords": [
+    "todo",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "javascript",
+    "fullstack"
+  ],
+  "author": "dhanashri-salunkhe25",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhanashri-salunkhe25/todos.git"
+  }
+}
