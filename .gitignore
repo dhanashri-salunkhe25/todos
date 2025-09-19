@@ -3,22 +3,93 @@
 /frontend/node_modules
 /backend/node_modules
 
-# Python files (completely ignore - this is a JavaScript project)
+# Python files (completely ignore - this is a JAVASCRIPT project)
 *.py
 *.pyc
 *.pyo
 *.pyd
+*.pyw
+*.pyz
+*.pyzw
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 venv/
 env/
 ENV/
 .venv/
 .ENV/
+.env
 /backend/venv
+/venv
+/.venv
 pip-log.txt
 pip-delete-this-directory.txt
+requirements.txt
+requirements-dev.txt
+setup.py
+setup.cfg
+pyproject.toml
+Pipfile
+Pipfile.lock
+poetry.lock
+conda-meta/
+.conda/
+.spyderproject
+.spyproject
+.rope_project_settings
+
+# Python package manager and virtual environment traces
+site-packages/
+.Python
+.virtualenv
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.hypothesis/
+
+# Python IDEs
+.spyderproject
+.spyproject
+.rope_project_settings
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python documentation
+docs/_build/
+
+# Additional Python exclusions to force JavaScript detection
+**/*python*
+**/*venv*
+**/*conda*
+**/*pip*
+**/python/**
+**/Python/**
 
 # Build outputs
 /dist
